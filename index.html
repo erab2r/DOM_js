@@ -5,19 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        #fruits-title{
+            color:black ;
+        }
+        .important-places{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, veniam doloribus fuga architecto repellat quibusdam vero quaerat soluta inventore quod error blanditiis accusantium ab nam earum sint animi mollitia rem!</p>
     </header>
     <main>
-        <h1>My Awesome DOM da</h1>
+       <section>
+         <h1>My Awesome DOM da</h1>
         <ul>
             <li>Jalali set</li>
             <li>shafayet</li>
             <li>bonobash</li>
+            <li>DOM da baba</li>
         </ul>
+       </section>
+       <section>
+        <h1 id="places-title">Places I like to visit</h1>
+        <ul>
+            <li class = "important-places">sondhorban</li>
+            <li class = "important-places">Bandhorban</li>
+            <li class = "important-places">Kataban</li>
+            <li>Shalbon</li>
+        </ul>
+       </section>
+        <section>
+            <ul>
+            <h1 id="fruits-title">Fruits I like</h1>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Carrot</li>
+        </ul>
+        </section>
     </main>
     <script src="js/DOM..js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+        const allHeading = document.getElementsByTagName('h1');
+        for(const h1 of allHeading){
+            console.log(h1.innerText);
+        }
+       const allPlaces = document.getElementsByClassName('important-places');
+        for(const place of allPlaces){
+            console.log(place.innerText);
+        }
+
+    </script>
 </body>
 </html>
