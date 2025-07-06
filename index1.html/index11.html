@@ -12,8 +12,15 @@
     <button onclick="document.body.style.backgroundColor ='Yellow'">Make Yellow</button>
      <button onclick="makeRed()">Make Red</button>
      <button id ="make-Blue">Make Blue</button>
+     <button id="make-pink">Make Pink</button>
     <script src="js/events.js"></script>
     <script>
+        const pinkButton = document.getElementById('make-pink');
+        pinkButton.addEventListener('click',makePink);
+
+        function makePink(){
+            document.body.style.backgroundColor = 'pink';
+        }
      
     </script>
     
