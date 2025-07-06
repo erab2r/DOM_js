@@ -6,6 +6,9 @@
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="styles/styles.css">
     <style>
+        .fruits-container li{
+            color: green;
+        }
         #fruits-title{
             color:black ;
         }
@@ -38,7 +41,7 @@
             <li>Shalbon</li>
         </ul>
        </section>
-        <section>
+        <section class="fruits-container">
             <ul>
             <h1 id="fruits-title">Fruits I like</h1>
             <li>Apple</li>
@@ -64,6 +67,12 @@
         for(const place of allPlaces){
             console.log(place.innerText);
         }
+        const someLi = document.querySelectorAll('.fruits-container li');
+           console.log(someLi);
+        for (const li of someLi) {
+              console.log(li.innerText);
+        }
+
 
     </script>
 </body>
