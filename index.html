@@ -32,7 +32,7 @@
             <li>DOM da baba</li>
         </ul>
        </section>
-       <section>
+       <section id="places-container">
         <h1 id="places-title">Places I like to visit</h1>
         <ul>
             <li class = "important-places">sondhorban</li>
@@ -43,7 +43,7 @@
        </section>
         <section class="fruits-container">
             <ul>
-            <h1 id="fruits-title">Fruits I like</h1>
+            <h1 id="fruits-title" class="some-class random-class blue-bg">Fruits I like</h1>
             <li>Apple</li>
             <li>Banana</li>
             <li>Carrot</li>
@@ -51,26 +51,27 @@
         </section>
     </main>
     <script src="js/DOM..js"></script>
+    <script src="js/styleInJs.js"></script>
     <script>
         const liCollection = document.getElementsByTagName('li');
         // console.log(liCollection);
         for(const li of liCollection){
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
         const allHeading = document.getElementsByTagName('h1');
         for(const h1 of allHeading){
-            console.log(h1.innerText);
+            // console.log(h1.innerText);
         }
         const fruitTitle = document.getElementById('fruits-title');
         fruitTitle.innerText = "Fruits changed by JS";
        const allPlaces = document.getElementsByClassName('important-places');
         for(const place of allPlaces){
-            console.log(place.innerText);
+            // console.log(place.innerText);
         }
         const someLi = document.querySelectorAll('.fruits-container li');
            console.log(someLi);
         for (const li of someLi) {
-              console.log(li.innerText);
+            //   console.log(li.innerText);
         }
 
 
