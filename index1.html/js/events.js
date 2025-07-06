@@ -11,3 +11,11 @@ const makeBlueButton = document.getElementById('make-Blue');
         document.body.style.backgroundColor = 'blue';
       }
 
+//option: 4
+
+const pinkButton = document.getElementById('make-pink');
+        pinkButton.addEventListener('click',makePink);
+
+        function makePink(){
+            document.body.style.backgroundColor = 'pink';
+        }
