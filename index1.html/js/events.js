@@ -24,4 +24,9 @@ const pinkButton = document.getElementById('make-pink');
 const makeGreenButton = document.getElementById('make-green');
       makeGreenButton.addEventListener('click',function makeGreen(){
         document.body.style.backgroundColor = 'green';
-      })        
+      })     
+      
+//option 5 
+ document.getElementById('make-yellow').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'goldenrod';
+         })      
