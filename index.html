@@ -50,6 +50,10 @@
         </ul>
         </section>
     </main>
+    <p id="input-text-display">Write Somethings</p>
+    <input id="input" type="text">
+    <button id="btn-update">update</button>
+
     <script src="js/DOM..js"></script>
     <script src="js/append.js"></script>
     <script src="js/styleInJs.js"></script>
@@ -74,6 +78,14 @@
         for (const li of someLi) {
             //   console.log(li.innerText);
         }
+
+        document.getElementById('btn-update').addEventListener('click',function(){
+            const text = document.getElementById('input');
+            const text2 = text.value;
+            const p = document.getElementById('input-text-display');
+            p.innerText = text.value;
+            text.value ='';
+        })
 
 
     </script>
