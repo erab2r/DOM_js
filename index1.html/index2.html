@@ -7,19 +7,35 @@
 </head>
 <body>
     <h1>Final DOM Event Handlers</h1>
-    <h3 id="handler-status">Default Text</h3>
-    <button onclick="handleOnClick()">Handle event by add onclick function</button>
-    <h3 id="habib">Habib</h3>
-    <button onclick="eras()">ISRAT JAHAN ERA</button>
+    <h2 id="add">BEST FRIENDS</h2>
+    <p id="input-text-display">Default Input Text</p>
+    <input id="input-field"  type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <button onclick="buttonprocess()">Click Me1</button>
+    <button id="hello">Click Me2</button>
+ 
     <script>
-        function handleOnClick(){
-            const handlerStatus = document.getElementById('handler-status');
-            handlerStatus.innerText = 'Handled by function attached on onclick attribute';
+        function buttonprocess(){
+            const both1 = document.getElementById('add');
+            both1.innerText = 'ISRAT JAHAN ERA';
         }
-        function eras(){
-            const both = document.getElementById('habib');
-            both.innerText = 'Habib Ullah Sajib';
-        }
+        //option 2
+      document.getElementById('hello').addEventListener('click', function () {
+      const both = document.getElementById('add');
+      both.innerText = 'HABIB ULLAH SAJIB';
+      })
+      //option 3
+      document.getElementById('btn-update').addEventListener('click',function(){
+           const inputField = document.getElementById('input-field');
+           const inputText = inputField.value;
+
+           const p = document.getElementById('input-text-display');
+           p.innerText = inputText;
+           inputText.value = '';
+      })
+
     </script>
 </body>
 </html>
