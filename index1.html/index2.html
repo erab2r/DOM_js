@@ -9,10 +9,16 @@
     <h1>Final DOM Event Handlers</h1>
     <h3 id="handler-status">Default Text</h3>
     <button onclick="handleOnClick()">Handle event by add onclick function</button>
+    <h3 id="habib">Habib</h3>
+    <button onclick="eras()">ISRAT JAHAN ERA</button>
     <script>
         function handleOnClick(){
             const handlerStatus = document.getElementById('handler-status');
             handlerStatus.innerText = 'Handled by function attached on onclick attribute';
+        }
+        function eras(){
+            const both = document.getElementById('habib');
+            both.innerText = 'Habib Ullah Sajib';
         }
     </script>
 </body>
