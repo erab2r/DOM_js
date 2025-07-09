@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body>
+    <h1>Exploring event Bubble</h1>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum.</li>
+            <li class="item">Cum, sapiente.</li>
+            <li class="item">Voluptatibus, alias.</li>
+            <li class="item">Quisquam, reiciendis!</li>
+            <li class="item">Atque, repellat.</li>
+            <li class="item">Autem, nemo!</li>
+        </ul>
+        <button id="btn-add-item">Add Item</button>
+    </section>
+    <script>
+        // const items = document.getElementsByClassName('item');
+        // for(const item of items){
+        //     item.addEventListener('click',function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+        document.getElementById('list-container').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+        document.getElementById('btn-add-item').addEventListener('click',function(){
+            const listContainer = document.getElementById('list-container');
+            const li = document.createElement('li');
+            li.innerText = 'NEW PHONES';
+            li.classList.add('item');
+            listContainer.appendChild(li);
+        })
+    </script>
+    
+</body>
+</html>
