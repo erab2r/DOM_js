@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="secret-info">My secret info</h1>
+    <input  id="delete-confirm" type="text" placeholder="Please type Delete">
+    <button id="btn-delete" disabled>Delete</button>
+    <!-- another one -->
+    <h1 id="privacy-info">My privacy</h1>
+    <input id="remove-confirm"   type="text" placeholder="Please type Remove">
+    <button id="btn-remove" disabled>Remove</button>
+
+    <script>
+        document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+          const text = event.target.value;
+          const deleteButton = document.getElementById('btn-delete');
+          if(text === 'delete'){
+            deleteButton.removeAttribute('disabled');
+          }
+          else{
+            deleteButton.setAttribute('disabled',true);
+          }
+        })
+        document.getElementById('btn-delete').addEventListener('click',function(){
+        const secret = document.getElementById('secret-info');
+        secret.style.display = 'none';
+        })
+        // another js
+        document.getElementById('remove-confirm').addEventListener('keyup',function(events){
+            const text2 = events.target.value;
+            const buttonR = document.getElementById('btn-remove');
+            if(text2 === 'remove'){
+                buttonR.removeAttribute('disabled');
+            }
+            else{
+                buttonR.setAttribute('disabled',true);
+            }
+        })
+        document.getElementById('btn-remove').addEventListener('click',function(){
+            const private = document.getElementById('privacy-info');
+            private.style.display = 'none';
+        })
+    </script>
+</body>
+</html>
